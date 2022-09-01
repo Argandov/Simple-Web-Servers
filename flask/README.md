@@ -1,6 +1,7 @@
 # Simple Flask HTTP API File Upload Server 
 
 This application DOES NOT implement SSL in any way at the moment
+For TLS comms [use this guide](https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https)
 
 ## Usage:
 
