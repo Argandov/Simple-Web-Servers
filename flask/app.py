@@ -29,11 +29,13 @@ def upload_file():
             data = request.form.to_dict(flat=False)['data'][0]
             if len(data) > 0:
                 timestamp = '{:%H%M%S-%Y%m%d}'.format(datetime.now())
-                FILENAME = "upload-" + timestamp
-                FILENAME = app.config['UPLOAD_FOLDER'] + "/" + FILENAME
+                FILE = "upload-" + timestamp
+                FILENAME = app.config['UPLOAD_FOLDER'] + "/" + FILE
                 with open(FILENAME, 'w') as F:
                     F.write(data)
-            return f"[+] ok {FILENAME}\n"
+                return f"[+] ok {FILE}\n"
+            else:
+                return f"[+] File {FILE} is empty"
         except:
             return "[!] Use data=$(some content) to send data"
     else:
