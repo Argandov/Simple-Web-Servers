@@ -16,6 +16,9 @@ Upon confirmation we receive the file name (This will be required for downloadin
 
 ### File Downloads:
 
+(examples)
 ```bash
 curl --user test:test http://<ip>:<port>/files/my-file
+
+wget --user test --password test http://<ip>:<port>/files/my-file
 ```
